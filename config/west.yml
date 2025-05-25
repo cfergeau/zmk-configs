@@ -13,5 +13,9 @@ manifest:
       remote: cfergeau
       clone-depth: 1
       revision: main
+    - name: zmk-config-corne-eyelash
+      remote: cfergeau
+      clone-depth: 1
+      revision: main
   self:
     path: config
