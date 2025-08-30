@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cfergeau
       url-base: https://github.com/cfergeau
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,5 +19,8 @@ manifest:
       remote: cfergeau
       clone-depth: 1
       revision: module
+    - name: zmk-helpers
+      remote: urob
+      revision: main
   self:
     path: config
