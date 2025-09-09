@@ -55,52 +55,30 @@ ZMK_HOLD_TAP(hrm, label = "Home row mod"; 	\
     };
 };
 
-// Reuse the ZMK_BASE_LAYER trick from https://github.com/urob/zmk-config/blob/main/config/base.keymap
-// This will allow to share keymaps between different keyboard geometries
-// LT - Left Top
-// RT - Right Top
-// LM - Left Middle
-// RM - Right Middle
-// LB - Left Bottom
-// RB - Right Bottom
-// LH - Left H…
-// RH - Right H…
+ZMK_LAYER(QWERTY, \
+          &kp TAB           &kp Q           &kp W           &kp E             &kp R        &kp T                                        &kp UP                &kp Y        &kp U               &kp I              &kp O           &kp P              &kp BSPC \
+          &gresc_mod_morph  &hrm LEFT_GUI A  &hrm LEFT_ALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                              &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hrm LEFT_CONTROL J  &hrm RIGHT_SHIFT K  &hrm LEFT_ALT L  &hrm LEFT_GUI SEMI  &kp SQT \
+          &kp LCTRL         &kp Z           &kp X           &kp C             &kp V        &kp B          &kp K_PLAY_PAUSE              &kp DOWN              &kp N        &kp M               &kp COMMA          &kp DOT         &kp FSLH           &kp ENTER \
+                                                  &lt 2 TAB         &lt 1 SPACE  &kp BACKSPACE                                                      &lt 1 ENTER  &lt 2 ESCAPE        &kp RALT, \
+          &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN)
 
+ZMK_LAYER(navim, \
+&kp TAB    &kp TAB    &trans  &trans       &trans  &trans                    &trans          &trans    &trans         &trans     &trans     &trans      &trans \
+&kp GRAVE  &kp GRAVE  &trans  &trans       &trans  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp BSPC    &trans \
+&trans     &trans     &trans  &trans       &trans  &trans  &trans            &trans          &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp DELETE  &bootloader \
+                              &lt 2 GRAVE  &trans  &trans                                    &trans    &trans         &trans)
 
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)        \
-  ZMK_LAYER(name, \
-    &kp TAB          LT           &kp UP               RT &kp BSPC  \
-    &gresc_mod_morph LM &kp LEFT  &kp ENTER  &kp RIGHT RM &kp SQT   \
-    &kp LCTRL        LB &kp K_PLAY_PAUSE     &kp DOWN  RB &kp ENTER \
-    &lt 2 TAB        LH                                RH &kp RALT  \
-  )
+ZMK_LAYER(num, \
+&kp GRAVE  &kp LS(N1)    &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp BSPC          &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans \
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp N3      &kp N4      &kp N5                &trans  &trans    &trans  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &trans \
+&kp F1     &kp F2        &kp F3        &kp F4      &kp F5      &kp F6      &trans            &trans            &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12 \
+                                       &trans      &trans      &trans                                          &trans      &trans      &trans)
 
-#ifndef ZMK_BASE_LAYER
-  #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
-      ZMK_LAYER(name, LT RT LM RM LB RB LH RH)
-#endif
-
-ZMK_BASE_LAYER(qwerty52, \
-          &kp Q            &kp W            &kp E              &kp R         &kp T, &kp Y      &kp U                &kp I               &kp O            &kp P, \
-          &hrm LEFT_GUI A  &hrm LEFT_ALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G, &kp H      &hrm LEFT_CONTROL J  &hrm RIGHT_SHIFT K  &hrm LEFT_ALT L  &hrm LEFT_GUI SEMI, \
-          &kp Z            &kp X            &kp C              &kp V         &kp B, &kp N      &kp M                &kp COMMA           &kp DOT          &kp FSLH, \
-                                                        &lt 1 SPACE  &kp BACKSPACE, &lt 1 ENTER  &lt 2 ESCAPE)
-
-ZMK_BASE_LAYER(navim52, \
-          &kp TAB    &trans  &trans       &trans  &trans,   &trans    &trans         &trans     &trans     &trans, \
-          &kp GRAVE  &trans  &trans       &trans  &trans,   &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp BSPC, \
-          &trans     &trans  &trans       &trans  &trans,   &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp DELETE, \
-                                          &trans  &trans,   &trans    &trans)
-ZMK_BASE_LAYER(num52, \
-          &kp LS(N1)    &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5),   &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0), \
-          &kp NUMBER_1  &kp NUMBER_2  &kp N3      &kp N4      &kp N5,       &kp N6      &kp N7      &kp N8      &kp N9      &kp N0, \
-          &kp F1        &kp F2        &kp F3      &kp F4      &kp F5,       &kp F6      &kp F7      &kp F8      &kp F9      &kp F10, \
-                                                  &trans      &trans,       &trans      &trans)
-
-ZMK_BASE_LAYER(adjust52, \
-          &bootloader     &trans          &trans        &out OUT_BLE  &out OUT_USB,   &trans           &trans             &trans           &trans           &kp K_SLEEP, \
-          &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3,   &kp K_PREVIOUS   &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_NEXT       &kp K_PLAY_PAUSE, \
-          &studio_unlock  &trans          &trans        &trans        &trans,         &trans           &trans             &trans           &trans           &trans,
-                                                        &trans        &trans,         &kp INS          &kp DEL)
+ZMK_LAYER(adjust, \
+&bootloader     &trans           &trans          &trans        &out OUT_BLE  &out OUT_USB                                   &mmv MOVE_UP                     &trans           &trans             &trans           &trans           &trans  &kp K_SLEEP \
+&bt BT_CLR      &trans           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_PREVIOUS   &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_NEXT       &trans  &kp K_PLAY_PAUSE \
+&studio_unlock  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans  &trans \
+                                                 &trans        &trans        &trans                                                                          &kp INS          &kp DEL            &trans, \
+            &scroll_encoder)
 
 ZMK_CONDITIONAL_LAYER(conditional_adjust, 1 2, 3)
