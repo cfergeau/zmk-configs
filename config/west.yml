@@ -17,5 +17,9 @@ manifest:
     - name: zmk-config-selenium
       remote: cfergeau
       revision: my-selenium
+    - name: zmk-config-corne-eyelash
+      remote: cfergeau
+      clone-depth: 1
+      revision: main
   self:
     path: config
