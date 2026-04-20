@@ -12,8 +12,8 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-config-totem
-      remote: keebs34
-      revision: main
+      remote: cfergeau
+      revision: zmk-module
     - name: zmk-config-selenium
       remote: cfergeau
       revision: my-selenium
