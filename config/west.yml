@@ -11,12 +11,12 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-config-totem
-      remote: cfergeau
-      revision: zmk-module
+    - name: zmk-keyboard-totem
+      remote: keebs34
+      revision: main
     - name: zmk-config-selenium
-      remote: cfergeau
-      revision: my-selenium
+      remote: keebs34
+      revision: main
     - name: zmk-config-corne-eyelash
       remote: cfergeau
       clone-depth: 1
