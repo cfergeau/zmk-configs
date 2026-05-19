@@ -9,11 +9,11 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3-branch
       import: app/west.yml
     - name: zmk-keyboard-totem
       remote: keebs34
-      revision: main
+      revision: v0.3-branch
     - name: zmk-config-selenium
       remote: keebs34
       revision: main
