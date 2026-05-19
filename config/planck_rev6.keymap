@@ -2,9 +2,9 @@
                                  LOUT2,  LROW2,  RROW2,  ROUT2, \
                                  LOUT3,  LROW3,  RROW3,  ROUT3, \
                                  LT1, LT2, LT3,  RT3, RT2, RT1) \
-    LOUT1     LROW1                                                  RROW1  ROUT1     \
-    LOUT2     LROW2                                                  RROW2  ROUT2     \
-    LOUT3     LROW3                                                  RROW3  ROUT3     \
+    &none     LROW1                                                  RROW1  &none     \
+    &none     LROW2                                                  RROW2  &none     \
+    &none     LROW3                                                  RROW3  &none     \
     &none     &none   &none  LT1  LT2  LT3      RT3  RT2  RT1  &none &none  &none
 
 #include <selenium/selenium.keymap>
