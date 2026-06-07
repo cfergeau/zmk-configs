@@ -17,6 +17,10 @@ manifest:
     - name: zmk-config-selenium
       remote: keebs34
       revision: main
+    - name: zmk-config-klor
+      remote: cfergeau
+      clone-depth: 1
+      revision: zmk-module
     - name: zmk-config-corne-eyelash
       remote: cfergeau
       clone-depth: 1

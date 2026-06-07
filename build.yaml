@@ -34,3 +34,13 @@ include:
   - board: eyelash_corne_left
     shield: settings_reset
     #snippet: zmk-usb-logging
+
+  # KLOR
+  - board: nice_nano@2//zmk
+    shield: klor_left
+    artifact-name: klor_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: nice_nano@2//zmk
+    shield: klor_right
+    artifact-name: klor_right
