@@ -1,3 +1,6 @@
+#include "zmk-helpers/key-labels/4x12.h"
+
+#define TIMELESS_HRMS
 #define KB_LAYOUT_ERGOL
 #define VIM_NAVIGATION
 #define HRM_SHIFT
@@ -11,4 +14,4 @@
     &none     LROW3                                                  RROW3  &none     \
     &none     &none   &none  LT1  LT2  LT3      RT3  RT2  RT1  &none &none  &none
 
-#include "../zmk-config-selenium/include/selenium/selenium.keymap"
+#include "selenium/selenium.keymap"
