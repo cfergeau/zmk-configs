@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/keebs34
     - name: cfergeau
       url-base: https://github.com/cfergeau
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,8 +17,8 @@ manifest:
       remote: keebs34
       revision: main
     - name: zmk-config-selenium
-      remote: keebs34
-      revision: main
+      remote: cfergeau
+      revision: timeless
     - name: zmk-config-klor
       remote: cfergeau
       clone-depth: 1
@@ -24,6 +26,9 @@ manifest:
     - name: zmk-config-corne-eyelash
       remote: cfergeau
       clone-depth: 1
+      revision: main
+    - name: zmk-helpers
+      remote: urob
       revision: main
   self:
     path: config
