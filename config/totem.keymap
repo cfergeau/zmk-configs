@@ -26,4 +26,4 @@
     LT1 LT2 LT3   RT3 RT2 RT1
 
 
-#include "../zmk-config-selenium/include/selenium/selenium.keymap"
+#include "selenium/selenium.keymap"
