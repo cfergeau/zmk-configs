@@ -11,4 +11,4 @@
     LOUT3     LROW3         &kp K_PLAY_PAUSE               &kp DOWN                RROW3  ROUT3     \
                  LT1  LT2  LT3                                          RT3  RT2  RT1
 
-#include "../zmk-config-selenium/include/selenium/selenium.keymap"
+#include "selenium/selenium.keymap"

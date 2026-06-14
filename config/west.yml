@@ -23,8 +23,8 @@ manifest:
       remote: cfergeau
       clone-depth: 1
       revision: zmk-module
-    - name: zmk-config-corne-eyelash
-      remote: cfergeau
+    - name: zmk-keyboard-eyelash-corne
+      remote: keebs34
       clone-depth: 1
       revision: main
     - name: zmk-helpers
