@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cfergeau
       url-base: https://github.com/cfergeau
+    - name: keebs34
+      url-base: https://github.com/keebs34
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,9 +15,9 @@ manifest:
       remote: cfergeau
       clone-depth: 1
       revision: main
-    - name: zmk-config-corne-eyelash
-      remote: cfergeau
+    - name: zmk-keyboard-eyelash-corne
+      remote: keebs34
       clone-depth: 1
-      revision: module
+      revision: main
   self:
     path: config
