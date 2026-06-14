@@ -16,5 +16,9 @@ manifest:
       remote: keebs34
       clone-depth: 1
       revision: main
+    - name: zmk-keyboard-totem
+      remote: keebs34
+      clone-depth: 1
+      revision: main
   self:
     path: config
