@@ -15,40 +15,40 @@
 include:
 
   # EyeLash Corne
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: eyelash_corne_right nice_view
     artifact-name: eyelash_corne_right
     #snippet: zmk-usb-logging
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: eyelash_corne_left nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: eyelash_corne_left
 
   # KLOR
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: klor_left
     artifact-name: klor_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: klor_right
     artifact-name: klor_right
 
   # Planck
-  - board: planck_rev6
+  - board: planck//zmk
     snippet: studio-rpc-usb-uart
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
 
   # Totem
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_left
     artifact-name: totem_left
     snippet: studio-rpc-usb-uart
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_right
     artifact-name: totem_right
     snippet: studio-rpc-usb-uart
@@ -56,6 +56,6 @@ include:
       -DCONFIG_ZMK_STUDIO=y
 
   # Settings reset
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
     #snippet: zmk-usb-logging
