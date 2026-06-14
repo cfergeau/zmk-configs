@@ -25,6 +25,12 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: eyelash_corne_left
 
+  # Planck
+  - board: planck_rev6
+    snippet: studio-rpc-usb-uart
+    cmake-args: >-
+      -DCONFIG_ZMK_STUDIO=y
+
   # Totem
   - board: seeeduino_xiao_ble
     shield: totem_left
