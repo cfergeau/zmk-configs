@@ -9,6 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: v0.3-branch
       import: app/west.yml
+    - name: zmk-config-selenium
+      remote: keebs34
+      revision: main
     - name: zmk-keyboard-eyelash-corne
       remote: keebs34
       clone-depth: 1
