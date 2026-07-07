@@ -4,14 +4,17 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: keebs34
       url-base: https://github.com/keebs34
+    - name: cfergeau
+      url-base: https://github.com/cfergeau
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-config-selenium
-      remote: keebs34
-      revision: main
+      remote: cfergeau
+      revision: leader
+      import: config/west.yml
     - name: zmk-keyboard-eyelash-corne
       remote: keebs34
       clone-depth: 1
